@@ -1,10 +1,12 @@
 import clsx from 'clsx'
 
+import myAlert from '~/myAlert';
 import styles from './Button.module.scss';
 
 function Button({...props}) {
   return (
     <button
+      onClick={myAlert}
       className={ clsx( styles.btn, {
         [ styles.primary ]: props.primary,
         [ styles.success ]: props.success,
