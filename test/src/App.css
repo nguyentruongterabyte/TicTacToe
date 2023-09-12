@@ -37,6 +37,22 @@
   }
 }
 
+/* Game */
+.game {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.game-board {
+  
+}
+
+.game-info {
+  font-size: 0.9rem;
+}
+
+/* Board */
 .board-row {
   display: flex;
   justify-content: center;
@@ -47,15 +63,18 @@
   border-top: none;
 }
 
+/* Square */
 .square {
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
   border: 1px solid #333;
   background-color: #fff;
   font-weight: 700;
+  font-size: 1.6rem;
 }
 
 .square + .square {
   border-left: none;
 }
+

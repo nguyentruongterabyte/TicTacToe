@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <title>React Element Types</title>
+</head>
+<body>
+  <div id="root">
+
+  </div>
+  <script type = "text/babel">
+    
+    
+
+    const rootElement = document.getElementById('root');
+    const root = ReactDOM.createRoot(rootElement);
+
+    const posts = [
+      {
+        image: '',
+        title: 'Cảm thấy khó khăn khi chuyển sang một ngôn ngữ mới',
+        description: 'Tôi làm chuyên môn về phân tích dữ liệu, chủ yếu là dùng phần mềm chuyên môn sâu và dùng rất nhiều SQL db, python. Hai món đó cũng...',
+        published: 'một tháng trước·2 phút đọc'
+      },
+      {
+        image: 'https://files.fullstack.edu.vn/f8-prod/blog_posts/7256/64448752c63c4.jpg',
+        title: 'Học viên Funix lạc đường tới F8',
+        description: 'Mình đã tham gia khóa học lập trình 6 tháng ở funix và cũng có nhiều lý do khác dẫn đến quá hạn quá học và cũng đã hoàn thành 4...',
+        published: '2 tháng trước·1 phút đọc'
+      },
+      {
+        image: 'https://fullstack.edu.vn/blog/danh-gia-ep-tam-voi-mot-so-truong.html',
+        title: 'Đánh giá ÉP TÁM với một số trường',
+        description: 'Hí anh em! Vào vấn đề luôn, trong thời gian mình có quá nhiều thời gian rỗi nên mình đã bỏ 1 ít thời gian và tiền đi kiểm chứng và...',
+        published: '2 tháng trước·2 phút đọc'
+      },
+
+    ]
+
+    function PostItem (props) {
+      return (
+        <div className="post-item">
+              <img src={props.image} alt={props.title}/>
+              <h2 className="post-title">{props.title}</h2>
+              <p className="post-desc">{props.description}</p>
+              <p className="post-published">{props.published}</p>
+        </div>
+      )
+    }
+
+    
+
+    const App = (
+      <div className="posts-list ">
+        <PostItem 
+          image="https://files.fullstack.edu.vn/f8-prod/blog_posts/7256/64448752c63c4.jpg"
+          title="Cảm thấy khó khăn khi chuyển sang một ngôn ngữ mới"
+          description="Tôi làm chuyên môn về phân tích dữ liệu, chủ yếu là dùng phần mềm chuyên môn sâu và dùng rất nhiều SQL db, python. Hai món đó cũng..."
+          published=" tháng trước·1 phút đọc"
+        />  
+        <PostItem 
+          image="https://files.fullstack.edu.vn/f8-prod/blog_posts/7256/64448752c63c4.jpg"
+          title="2 Cảm thấy khó khăn khi chuyển sang một ngôn ngữ mới"
+          description="2 Tôi làm chuyên môn về phân tích dữ liệu, chủ yếu là dùng phần mềm chuyên môn sâu và dùng rất nhiều SQL db, python. Hai món đó cũng..."
+          published=" 2 tháng trước·1 phút đọc"
+        />  
+        <PostItem 
+          image="https://files.fullstack.edu.vn/f8-prod/blog_posts/7256/64448752c63c4.jpg"
+          title="3 Cảm thấy khó khăn khi chuyển sang một ngôn ngữ mới"
+          description="3 Tôi làm chuyên môn về phân tích dữ liệu, chủ yếu là dùng phần mềm chuyên môn sâu và dùng rất nhiều SQL db, python. Hai món đó cũng..."
+          published="3 tháng trước·1 phút đọc"
+        />  
+      </div>
+    )
+
+    root.render(App);
+    
+  </script>
+</body>
+</html>
